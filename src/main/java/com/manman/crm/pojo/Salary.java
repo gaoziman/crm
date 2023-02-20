@@ -29,7 +29,6 @@ import lombok.experimental.Accessors;
 @ApiModel(value = "Salary对象", description = "员工工资表")
 public class Salary implements Serializable {
 
-    private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
