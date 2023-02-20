@@ -8,6 +8,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -84,9 +86,11 @@ public class Salary implements Serializable {
     private Timestamp createTime;
 
     @TableField("update_time")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Timestamp updateTime;
 
     @TableField("is_deleted")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @TableLogic
     private Integer isDeleted;
 
